@@ -9,14 +9,7 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["usuario"].Equals(""))
-        {
-            Response.Redirect("Login.aspx");
-        }
-        else
-        {
-            Response.Write(Session["usuario"].ToString());
-        }
+       
     }
 
     protected void Button1_Click(object sender, EventArgs e)
