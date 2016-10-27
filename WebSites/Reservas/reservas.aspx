@@ -14,7 +14,7 @@
                 <script type="text/javascript">
  function cargar_imagen(imagen) {
   var img = document.getElementById("myimage");
-  var img_dir = "http://localhost:50925/images/";
+  var img_dir = "../images/";
   if (img) {
    img.src = img_dir + imagen;
   }
