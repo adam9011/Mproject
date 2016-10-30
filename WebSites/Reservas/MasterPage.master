@@ -1,85 +1,83 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Reservas</title>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html" />
-<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
-<script type="text/javascript" src="scripts/JQuery/jquery-3.1.0.min.js"></script>
-    <link href="scripts/JQuery/UI/jquery-ui.css" rel="stylesheet" />
-    <script src="scripts/JQuery/UI/jquery-ui.min.js"></script>
-    <link href="scripts/JQuery/UI/jquery-ui.theme.css" rel="stylesheet" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="layout/styles/PageStyles.css" />
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
     
-
-
-
-
-    <style type="text/css">
-        .auto-style1 {
-            color: #B2C629;
-            background-color: #000000;
-        }
-    </style>
 </head>
-<body id="top" onload="Window_Onload()">
+<body onload="Window_Onload()">
     <form id="form1" runat="server">
-<!-- ####################################################################################################### -->
-<div class="wrapper col1">
-  <div id="header">
-    <div id="logo">
-      <h1><a href="index.aspx">R<span class="auto-style1">ESERVAS</span></a></h1>
-      <p>Auditorios FUNLAM</p>
-    </div>
-    <div id="topnav">
-      <ul>
-        <li class="active"><a href="index.aspx">Inicio</a></li>
-        <li><a href="Usuarios.aspx">Usuarios</a></li>
-        <li><a href="reservas.aspx">Reservas</a></li>
-        <li><a href="#">Auditorios</a>
-          <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-          </ul>
-        </li>
-        <li class="last"><a href="login.aspx">Login</a></li>
-          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/login.aspx"><li>Cerrar</li></asp:HyperLink>
-      </ul>
-    </div>
-    <br class="clear" />
-  </div>
-</div>
-<!-- ####################################################################################################### -->
-       
-<div class="wrapper col2">
-  
-    &nbsp;
-      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-      </asp:ContentPlaceHolder>
-   
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper col3">
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper col4">
-  <div id="footer">
-  </div>
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper col5">
-  <div id="copyright">
-    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-    <br class="clear" />
-  </div>
-</div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header" >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <asp:HyperLink class="navbar-brand" ID="aUserName" runat="server"></asp:HyperLink>
+            </div>
 
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.aspx">Inicio</a></li>
+                    <li><a href="Usuarios.aspx">Usuarios</a></li>
+                    <li><a href="reservas.aspx">Reservas</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Auditorios
+                            <b class="caret"></b>
+                        </a>
+                        <ul  class="dropdown-menu">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="last"><a href="login.aspx">Login</a></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/login.aspx">
+                            <li>Cerrar</li>
+                        </asp:HyperLink>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row header">
+                <div id="header">
+                    <div id="logo">
+                        <h1 class="reservasTitle"><a href="index.aspx">RESERVAS</a></h1>
+                        <p>Auditorios FUNLAM</p>
+                    </div>
+                <br/>
+                </div>
+            </div>
+       
+            <div class="row content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+
+            <div class="row">
+                <div id="footer">
+                    <label>Copyright © 2016. Todos los derechos reservados - Funlam</label>
+                </div>
+            </div>
+        </div>
     </form>
 </body>
 </html>

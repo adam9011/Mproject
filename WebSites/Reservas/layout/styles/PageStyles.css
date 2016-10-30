@@ -1,0 +1,61 @@
+﻿#footer {
+    background-color: #95ad19;
+    color: black;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    background-color: #b2c629;
+    padding: 30px 20px 30px 20px;
+}
+
+.header {
+    background-color: #000000;
+    color: #cccccc;
+    padding: 10px 20px;
+}
+
+.reservasTitle a {
+    color: #b2c629;
+}
+
+.reservasTitle a:hover {
+    color: #b2c629;
+    opacity: 0.7;
+}
+
+[data-role="field"] {
+    min-height: 40px;
+}
+
+[data-role="field"] label {
+     display: inline-block;
+     width: 110px;
+ }
+
+[data-role="field"] input {
+     display: inline-block;
+     box-sizing: border-box;
+     max-width: 200px;
+ }
+
+[data-role="field"] select {
+     display: inline-block;
+     box-sizing: border-box;
+ }
+
+ [data-role="field"] textarea {
+    max-width: 350px;
+    margin-bottom: 15px;
+ }
+
+ [data-role="field"] img {
+    margin-bottom: 15px;
+    margin-top: 10px;
+ }
+
+.ui-widget {
+     font-size: 0.9em;
+ }

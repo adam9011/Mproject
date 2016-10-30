@@ -14,8 +14,6 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-
-
         try { 
         clsClientes clte = new clsClientes(0, "", "", "", "","","");
         clte.Idcliente = int.Parse(txtdocumento.Text.Trim());

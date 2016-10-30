@@ -15,10 +15,6 @@ public partial class reservas : System.Web.UI.Page
         {
             Response.Redirect("Login.aspx");
         }
-        else
-        {
-            Response.Write(Session["usuario"].ToString());
-        }
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
